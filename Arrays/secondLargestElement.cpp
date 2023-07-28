@@ -1,6 +1,8 @@
+/* Find the second largest and second smallest number from an given array */
 #include <bits/stdc++.h>
 using namespace std;
 
+// Function to find second largest element
 int secondLargest(vector<int> arr, int n)
 {
     int largest = arr[0];
