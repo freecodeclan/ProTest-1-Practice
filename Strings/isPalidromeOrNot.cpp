@@ -1,6 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// To convert all uppercase to lowercase
+char toLowerCase(char ch)
+{
+    if (ch >= 'a' && ch <= 'z')
+    {
+        return ch;
+    }
+    else
+    {
+        char temp = ch - 'A' + 'a';
+        return temp;
+    }
+}
+
 // Function to check whether string is Palimdrome or not
 bool checkPalindrome(char a[], int n)
 {
@@ -8,7 +22,7 @@ bool checkPalindrome(char a[], int n)
     int en = n - 1;
     while (st <= en)
     {
-        if (a[st] != a[en])
+        if (toLowerCase(a[st]) != toLowerCase(a[en]))
         {
             return false;
         }
