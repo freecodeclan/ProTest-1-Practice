@@ -1,24 +1,22 @@
-/* Print from 1 to n using backtracking( means without using "i+1" this time.)   */
+/* Print name n times using recursion */
 #include <bits/stdc++.h>
 using namespace std;
 
 void fun(int i, int n)
 {
-    if (i < 1)
+    if (i > n) // Base Condition
     {
         return;
     }
-    fun(i - 1, n);
-    cout << i << " ";
+    cout << "Harsh" << endl;
+    fun(i + 1, n);
 }
-
 int main()
 {
     int n;
     cout << "Enter the value of n: ";
     cin >> n;
-
-    fun(n, n);
+    fun(1, n);
 
     return 0;
 }
